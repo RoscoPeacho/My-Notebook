@@ -1,0 +1,11 @@
+#! /bin/bash
+ #Wil
+echo "*******************"
+ 
+echo "IPV6 Address = "
+ip a | grep 'inet6' | tail -1 | awk '{print $2}'
+echo "SHA256 = "
+ 
+ip a | grep 'inet6' | tail -1 | awk '{print $2}' | sha256sum
+ 
+echo "*********************"
